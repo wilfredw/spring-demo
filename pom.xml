@@ -18,6 +18,9 @@
         <module>spring-demo-consumer-0</module>
         <module>spring-demo-consumer-2</module>
         <module>spring-demo-gateway</module>
+        <module>spring-demo-auth</module>
+        <module>spring-demo-resource</module>
+        <module>spring-demo-session</module>
     </modules>
 
     <properties>

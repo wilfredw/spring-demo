@@ -1,0 +1,5 @@
+server:
+  port: 8292
+spring:
+  application:
+    name: SERVICE-RESOURCE

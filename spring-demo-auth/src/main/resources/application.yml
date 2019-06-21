@@ -1,0 +1,5 @@
+server:
+  port: 8291
+spring:
+  application:
+    name: SERVICE-AUTH
