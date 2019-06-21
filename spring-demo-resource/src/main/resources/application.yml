@@ -3,3 +3,21 @@ server:
 spring:
   application:
     name: SERVICE-RESOURCE
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8291/users/current
+    client:
+      id: client_2
+      client-secret: 123456
+      access-token-uri: http://localhost:8291/oauth/token
+      grant-type: client_credentials,password
+      scope: server
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:8260/eureka
+    instance:
+      lease-expiration-duration-in-seconds: 6
+      lease-renewal-interval-in-seconds: 3
