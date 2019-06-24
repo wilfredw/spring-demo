@@ -20,6 +20,26 @@ spring:
       routes:
         - id: path_route
           uri: http://localhost:8281
-          order: 0
+          order: 100
           predicates:
             - Path=/**
+        - id: auth_route
+          uri: http://localhost:8291
+          order: 0
+          predicates:
+            - Path=/oauth/**
+        - id: auth_principle_route
+          uri: http://localhost:8291
+          order: 0
+          predicates:
+            - Path=/getPrinciple
+        - id: order_route
+          uri: http://localhost:8292
+          order: 0
+          predicates:
+            - Path=/order/**
+        - id: product_route
+          uri: http://localhost:8292
+          order: 0
+          predicates:
+            - Path=/product/**

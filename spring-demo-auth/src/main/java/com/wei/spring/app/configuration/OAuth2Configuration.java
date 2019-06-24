@@ -55,6 +55,7 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer securityConfigurer) throws Exception {
+        // 允许客户端发送表单来进行权限认证来获取令牌
         securityConfigurer.allowFormAuthenticationForClients();
     }
 }

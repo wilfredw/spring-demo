@@ -15,6 +15,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 public class ResourceConfiguration extends ResourceServerConfigurerAdapter {
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
+        // 配置资源访问规则
         httpSecurity.authorizeRequests()
                 .antMatchers("/order/**").authenticated();
     }
