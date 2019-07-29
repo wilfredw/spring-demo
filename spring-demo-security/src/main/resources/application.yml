@@ -1,18 +1,18 @@
 server:
-  port: 9293
+  port: 8293
 spring:
   application:
     name: SERVICE-SECURITY
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://localhost:9098/users/current
-    client:
-      id: client_2
-      client-secret: 123456
-      access-token-uri: http://localhost:9098/oauth/token
-      grant-type: client_credentials,password
-      scope: server
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://localhost:9098/users/current
+#    client:
+#      id: client_2
+#      client-secret: 123456
+#      access-token-uri: http://localhost:9098/oauth/token
+#      grant-type: client_credentials,password
+#      scope: server
 eureka:
   client:
     registry-fetch-interval-seconds: 5
