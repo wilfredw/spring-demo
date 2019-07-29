@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by viruser on 2019/7/29.
  */
 @Controller
+@RequestMapping("/security")
 public class LoginController {
     private Logger logger = LoggerFactory.getLogger(LoginController.class);
 
@@ -22,12 +23,12 @@ public class LoginController {
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
         logger.info("当前登陆用户：" + name);
 
-        return "home.html";
+        return "/home.html";
     }
 
     @RequestMapping("/login")
     public String showLogin() {
-        return "login.html";
+        return "/login.html";
     }
 
     @RequestMapping("/admin")

@@ -43,3 +43,10 @@ spring:
           order: 0
           predicates:
             - Path=/product/**
+        - id: route_security
+          uri: http://localhost:8293
+          order: 0
+          predicates:
+            - Path=/security/**
+          filters:
+            - PreserveHostHeader
