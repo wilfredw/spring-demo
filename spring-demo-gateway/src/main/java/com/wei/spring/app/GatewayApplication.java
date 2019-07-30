@@ -1,5 +1,6 @@
 package com.wei.spring.app;
 
+import com.wei.spring.app.filter.MyFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -40,5 +41,18 @@ public class GatewayApplication {
                 )
                 .build();
         //@formatter:on
+    }
+
+    @Bean
+    public RouteLocator testMyFilterRouteLocator(RouteLocatorBuilder builder) {
+        return builder.routes().route(r ->
+                r.path("/aa")
+                        //转发路由
+                        .uri("http://localhost:8003/provider/test")
+                        //注册自定义过滤器
+                        .filters(new MyFilter())
+                        //给定id
+                        .id("user-service"))
+                .build();
     }
 }

@@ -45,8 +45,16 @@ spring:
             - Path=/product/**
         - id: route_security
           uri: http://localhost:8293
-          order: 0
+          order: 2
           predicates:
             - Path=/security/**
           filters:
+            - PreserveHostHeader
+        - id: route_security_2
+          uri: http://localhost:8293
+          order: 0
+          predicates:
+            - Path=/security/hi
+          filters:
+            - SaveSession
             - PreserveHostHeader
