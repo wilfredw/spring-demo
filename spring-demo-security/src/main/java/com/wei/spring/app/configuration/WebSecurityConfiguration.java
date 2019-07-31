@@ -50,7 +50,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests()
                 // 如果有允许匿名的url，填在下面
-//                .antMatchers("/security/login").permitAll()
+                .antMatchers("/security/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 // 设置登陆页
@@ -61,12 +61,16 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .successHandler(myAuthenticationSuccessHandler)
                 .failureHandler(myAuthenticationFailHandler)
                 // 设置登陆success页
-                .defaultSuccessUrl("/security/").permitAll()
+//                .defaultSuccessUrl("/security/").permitAll()
                 // 自定义登陆用户名和密码参数，默认为username和password
 //                .usernameParameter("username")
 //                .passwordParameter("password")
                 .and()
-                .logout().logoutUrl("/security/logout").permitAll();
+                .logout()
+                .logoutUrl("/security/logout")
+                .deleteCookies()
+                .invalidateHttpSession(true)
+                .permitAll();
         // 关闭CSRF跨域
         httpSecurity.csrf().disable();
     }
