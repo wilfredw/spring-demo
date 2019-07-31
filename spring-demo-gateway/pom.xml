@@ -35,11 +35,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
             <!--<version>2.1.7.RELEASE</version>-->
@@ -76,7 +71,6 @@
             <artifactId>kotlin-reflect</artifactId>
             <optional>true</optional>
         </dependency>
-
     </dependencies>
 
     <build>

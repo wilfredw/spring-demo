@@ -5,6 +5,7 @@ import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
 
 /**
@@ -14,7 +15,10 @@ import reactor.core.publisher.Mono;
 public class MyGlobalFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        System.out.println("1111111111111111" + exchange.getSession());
+        System.out.println("1111111111111111");
+//        return exchange.getSession().map(s -> s.<String>getAttribute("user_id"))
+//                .doOnNext(System.out::print)
+//                .then(chain.filter(exchange));
         return chain.filter(exchange);
     }
 
