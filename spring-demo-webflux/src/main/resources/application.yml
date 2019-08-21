@@ -1,0 +1,5 @@
+server:
+  port: 8251
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration

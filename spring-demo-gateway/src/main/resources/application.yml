@@ -9,6 +9,8 @@ eureka:
       lease-expiration-duration-in-seconds: 6
       lease-renewal-interval-in-seconds: 3
 spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration
   application:
     name: SERVICE-GATEWAY
   cloud:
@@ -55,6 +57,22 @@ spring:
           order: 0
           predicates:
             - Path=/security/hi
+          filters:
+            - SaveSession
+            - PreserveHostHeader
+        - id: route_security_3
+          uri: http://localhost:8293
+          order: 0
+          predicates:
+            - Path=/favicon.ico
+          filters:
+            - SaveSession
+            - PreserveHostHeader
+        - id: route_webflux_1
+          uri: http://localhost:8251
+          order: 0
+          predicates:
+            - Path=/websession**
           filters:
             - SaveSession
             - PreserveHostHeader

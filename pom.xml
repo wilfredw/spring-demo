@@ -21,6 +21,7 @@
         <module>spring-demo-auth</module>
         <module>spring-demo-resource</module>
         <module>spring-demo-security</module>
+        <module>spring-demo-webflux</module>
     </modules>
 
     <properties>
