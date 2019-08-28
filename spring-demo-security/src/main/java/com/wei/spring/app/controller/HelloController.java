@@ -1,5 +1,6 @@
 package com.wei.spring.app.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -23,6 +24,15 @@ public class HelloController {
     @ResponseBody
     public String hello() {
         return "Hi, nice to meet you!";
+    }
+
+    @RequestMapping("/info")
+    @ResponseBody
+    public String info() {
+        JSONObject json = new JSONObject();
+        json.put("code", 0);
+        json.put("user_id", 123456);
+        return json.toJSONString();
     }
 
     @RequestMapping("/name")

@@ -56,7 +56,7 @@ spring:
           uri: http://localhost:8293
           order: 0
           predicates:
-            - Path=/security/hi
+            - Path=/favicon.ico
           filters:
             - SaveSession
             - PreserveHostHeader
@@ -64,10 +64,11 @@ spring:
           uri: http://localhost:8293
           order: 0
           predicates:
-            - Path=/favicon.ico
+            - Path=/security/user/hi
           filters:
             - SaveSession
             - PreserveHostHeader
+            - Authenticate
         - id: route_webflux_1
           uri: http://localhost:8251
           order: 0

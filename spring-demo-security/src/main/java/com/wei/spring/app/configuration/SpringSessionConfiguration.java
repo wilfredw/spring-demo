@@ -30,6 +30,7 @@ public class SpringSessionConfiguration {
         if (servletContext != null) {
             cookieSerializer.setUseBase64Encoding(false);
         }
+        cookieSerializer.setCookieName("SJSESSIONID");
         return cookieSerializer;
     }
 }
