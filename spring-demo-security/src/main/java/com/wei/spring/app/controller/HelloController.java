@@ -22,8 +22,14 @@ public class HelloController {
 
     @RequestMapping("/hi")
     @ResponseBody
-    public String hello() {
-        return "Hi, nice to meet you!";
+    public String hiSession() {
+        return "Hi, nice to meet you! Add into session";
+    }
+
+    @RequestMapping("/bye")
+    @ResponseBody
+    public String byeSession() {
+        return "Bye! Remove from session.";
     }
 
     @RequestMapping("/info")
@@ -31,7 +37,7 @@ public class HelloController {
     public String info() {
         JSONObject json = new JSONObject();
         json.put("code", 0);
-        json.put("user_id", 123456);
+        json.put("user_id", "123456");
         return json.toJSONString();
     }
 

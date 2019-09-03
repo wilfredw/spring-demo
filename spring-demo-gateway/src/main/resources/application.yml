@@ -69,6 +69,24 @@ spring:
             - SaveSession
             - PreserveHostHeader
             - Authenticate
+        - id: route_security_4
+          uri: http://localhost:8293
+          order: 0
+          predicates:
+            - Path=/security/user/bye
+          filters:
+            - SaveSession
+            - PreserveHostHeader
+            - CancelAuth
+        - id: route_security_5
+          uri: http://localhost:8293
+          order: 0
+          predicates:
+            - Path=/security/user/info
+          filters:
+            - SaveSession
+            - PreserveHostHeader
+            - SaveResponseAuth
         - id: route_webflux_1
           uri: http://localhost:8251
           order: 0
