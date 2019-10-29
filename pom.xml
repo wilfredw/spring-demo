@@ -22,6 +22,7 @@
         <module>spring-demo-resource</module>
         <module>spring-demo-security</module>
         <module>spring-demo-webflux</module>
+        <module>spring-demo-mongo</module>
     </modules>
 
     <properties>
