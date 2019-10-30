@@ -1,5 +1,6 @@
 package com.wei.spring.app.mongo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,10 +8,15 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MongoProperty {
+    @Value("mongo.host")
     private String host;
+    @Value("mongo.port")
     private String port;
+    @Value("mongo.authority")
     private String authority;
+    @Value("mongo.replica-set")
     private String replicaSet;
+    @Value("mongo.db")
     private String db;
 
     public String getHost() {

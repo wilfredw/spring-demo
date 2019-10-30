@@ -1,2 +1,8 @@
 server:
   port: 8300
+mongo:
+  host: 127.0.0.1
+  authority:
+  replica-set:
+  port: 27017
+  db: spring-demo
