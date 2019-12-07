@@ -23,6 +23,7 @@
         <module>spring-demo-security</module>
         <module>spring-demo-webflux</module>
         <module>spring-demo-mongo</module>
+        <module>spring-demo-cache</module>
     </modules>
 
     <properties>
