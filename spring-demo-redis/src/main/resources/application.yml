@@ -1,0 +1,13 @@
+server:
+  port: 6380
+redis:
+  type: single
+  host: 127.0.0.1
+  port: 6379
+  password: 123456
+  database: 0
+  sentinel:
+    master-name: aaa
+    addresses: 127.0.0.1:26379,127.0.0.1:26379
+  cluster:
+    nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382
