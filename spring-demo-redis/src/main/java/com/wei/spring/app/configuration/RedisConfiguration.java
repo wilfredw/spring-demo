@@ -1,4 +1,4 @@
-package com.wei.spring.app.redis;
+package com.wei.spring.app.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.*;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.util.Pair;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
@@ -31,28 +30,28 @@ public class RedisConfiguration {
         }
     }
 
-    @Value("${redis.type}")
+    @Value("${configuration.type}")
     private String type;
 
-    @Value("${redis.host}")
+    @Value("${configuration.host}")
     private String host;
 
-    @Value("${redis.port}")
+    @Value("${configuration.port}")
     private String port;
 
-    @Value("${redis.password}")
+    @Value("${configuration.password}")
     private String password;
 
-    @Value("${redis.database}")
+    @Value("${configuration.database}")
     private String database;
 
-    @Value("${redis.sentinel.master-name}")
+    @Value("${configuration.sentinel.master-name}")
     private String sentinelMasterName;
 
-    @Value("${redis.sentinel.addresses}")
+    @Value("${configuration.sentinel.addresses}")
     private String sentinelAddresses;
 
-    @Value("${redis.cluster.nodes}")
+    @Value("${configuration.cluster.nodes}")
     private String clusterNodes;
 
     @Bean
