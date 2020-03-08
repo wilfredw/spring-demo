@@ -11,4 +11,16 @@ public class RedisLock {
     public RedisLock(RedisTemplate redisTemplate) {
         this.redisTemplate = redisTemplate;
     }
+
+    public void lock() {
+        ;
+    }
+
+    public void unlock() {
+        ;
+    }
+
+    private void refresh() {
+        ;
+    }
 }
