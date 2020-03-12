@@ -24,6 +24,7 @@
         <module>spring-demo-webflux</module>
         <module>spring-demo-mongo</module>
         <module>spring-demo-cache</module>
+        <module>spring-demo-testcore</module>
     </modules>
 
     <properties>
