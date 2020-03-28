@@ -8,7 +8,7 @@ import org.springframework.core.io.ClassPathResource;
 
 import java.util.Date;
 
-public class TestCoreApplication {
+public class TestFactoryApplication {
     public static void main(String[] args) {
         BeanFactory beanFacotry = new XmlBeanFactory(new ClassPathResource("factory.xml"));
         TestBean testBean = (TestBean) beanFacotry.getBean("testBean");
