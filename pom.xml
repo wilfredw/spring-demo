@@ -34,6 +34,7 @@
         <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
         <jwt.version>2.2.0</jwt.version>
+        <aspectj.version>1.8.13</aspectj.version>
     </properties>
 
     <!--添加依赖 mvn dependency:tree -->
@@ -55,6 +56,18 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
