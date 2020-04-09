@@ -10,5 +10,6 @@ public class TestContextApplication {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         TestBean testBean = (TestBean)applicationContext.getBean("testBean");
         System.out.println(new Date() + " --- " + testBean.getTestStr());
+        testBean.test();
     }
 }
