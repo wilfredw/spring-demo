@@ -25,6 +25,7 @@
         <module>spring-demo-mongo</module>
         <module>spring-demo-cache</module>
         <module>spring-demo-testcore</module>
+        <module>spring-demo-testweb</module>
     </modules>
 
     <properties>
