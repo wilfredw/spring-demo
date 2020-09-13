@@ -23,7 +23,7 @@
 
         <!--视图解析器-->
         <dependency>
-            <groupId>org.springframe.boot</groupId>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
@@ -57,7 +57,7 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframe.boot</groupId>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
