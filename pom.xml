@@ -26,6 +26,7 @@
         <module>spring-demo-cache</module>
         <module>spring-demo-testcore</module>
         <module>spring-demo-testweb</module>
+        <module>spring-demo-utils</module>
     </modules>
 
     <properties>
