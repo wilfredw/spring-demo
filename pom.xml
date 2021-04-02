@@ -27,6 +27,7 @@
         <module>spring-demo-testcore</module>
         <module>spring-demo-testweb</module>
         <module>spring-demo-utils</module>
+        <module>spring-demo-aop</module>
     </modules>
 
     <properties>
