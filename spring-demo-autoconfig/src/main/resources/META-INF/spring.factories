@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wei.spring.autoconfig.TestAutoConfigurationA,\
+  com.wei.spring.autoconfig.TestAutoConfigurationB

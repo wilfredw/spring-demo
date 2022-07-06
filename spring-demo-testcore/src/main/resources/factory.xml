@@ -4,4 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="testBean" class="com.wei.spring.app.testcore.TestBean"></bean>
+    <bean id="testBeanA" class="com.wei.spring.app.testcore.TestBeanA">
+        <property name="testBeanB" ref="testBeanB"/>
+    </bean>
+    <bean id="testBeanB" class="com.wei.spring.app.testcore.TestBeanB">
+        <property name="testBeanA" ref="testBeanA"/>
+    </bean>
+
 </beans>

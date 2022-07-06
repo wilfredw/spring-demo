@@ -2,10 +2,12 @@ package com.wei.spring.app.testweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
-public class TestWebApp {
+@ImportResource(locations = {"classpath:spring-config.xml"})
+public class TestWebApplication {
     public static void main(String[] args) {
-        SpringApplication.run(TestWebApp.class, args);
+        SpringApplication.run(TestWebApplication.class, args);
     }
 }
